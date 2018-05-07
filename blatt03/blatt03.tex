@@ -1,0 +1,99 @@
+% Dokumentklasse; Optionen in eckige klammern
+\documentclass{scrartcl}
+% Ein paar Pakete für Komfort, etwa Umlaute
+\usepackage{german}
+\usepackage[utf8]{inputenc}
+
+% zum Einbinden von Grafiken
+\usepackage{graphicx}
+
+% bessere kontrolle über figures
+\usepackage{float}
+
+% für mehr Mathe-Optionen (AMS=American MAth Society)
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+% zum Einbetten von Code
+\usepackage{listings}
+
+% Anpassen von Kopf- und Fußzeilen.
+% weitere Optionen möglich, etwa footsepline (mehr Informationen in der KOMA-Skript Dokumentation)
+\usepackage[headsepline,automark]{scrlayer-scrpage}
+\pagestyle{scrheadings}
+\automark[section]{section}
+
+% äußere Kopfzeile (bei einseitigen Dokumenten rechts)
+\ohead[]{Alexander Hornig \\ Till}
+% innere Kopfzeile (bei einseitigen Dokumenten links)
+\ihead{\headmark}
+% mittlere Kopfzeile
+\chead{Stochastik - Blatt 3}
+% Fußzeile analog
+\ofoot[]{}
+\ifoot[]{}
+\cfoot[]{}
+
+\begin{document}
+
+
+%%%%%%%%%
+\section*{Aufgabe 1}
+  \subsection*{a)}
+
+  \subsection*{b)}
+
+
+%%%%%%%%%
+\section*{Aufgabe 2}
+  \subsection*{a)}
+
+  \subsection*{b)}
+
+
+%%%%%%%%%
+\section*{Aufgabe 3}
+	Die Menge der möglichen Antworten ist sehr groß, daher \\
+	$\Rightarrow$ Ziehen ihne Zurücklegen $\approx$ Ziehen mit Zurücklegen \\
+	$\Rightarrow$ Binomialverteilung \\
+	\\
+	$p_k = {n \choose k} p^k (1-p)^{n-k}$ \\
+	$n = 7$
+  \subsection*{a)}
+	$\mathbb{P}(\{\text{7 korrekte Antworten}\}) = {7 \choose 7} 0,7^7 (1-0,7)^{7-7} = 0,7^7 = 0,0823543$
+  \subsection*{b)}
+	$\mathbb{P}(\{\text{0 korrekte Antworten}\}) = {7 \choose 0} 0,7^0 (1-0,7)^{7-0} = 0,3^7 = 0,0002187$
+  \subsection*{c)}
+	$\mathbb{P}(\{\text{mindestens 1 korrekte Antwort}\}) = 1 - \mathbb{P}(\{\text{0 korrekte Antworten}\}) \stackrel{b)}{=} 1 - 0,3^7 = 0,9997813$
+  \subsection*{d)}
+	$\mathbb{P}(\{\text{3 korrekte Antworten}\}) = {7 \choose 3} 0,7^3 (1-0,7)^{7-3} = 35 * 0,7^3 * 0,3^4 = 0,0972405$
+
+%%%%%%%%%
+\section*{Aufgabe 4}
+	\begin{flalign*}
+						& P(A \cap B) = P(A) * P(B)  &|:P(B) && \\
+		\Leftrightarrow	& \frac{P(A \cap B)}{P(B)} = P(A) && \\
+		\stackrel{\text{Def 6.1}}{\Leftrightarrow} & P(A|B) = P(A) && \\
+		\Leftrightarrow	& P(A|B) = \frac{P(A) * P(B^c)}{P(B^c)} && \\
+		\Leftrightarrow	& P(A|B) = P(A|B^c) && \\
+		&& \square
+	\end{flalign*}
+
+
+%%%%%%%%%
+\section*{Aufgabe 5}
+	zwei Möglichkeiten
+	\subsection*{[1]}
+		Die größere Zahl wird als erste gezogen: \\
+		Es gibt 21 Zahlen $\geq 80$ und insgesamt 100 Zahlen: \\
+		$\Rightarrow \mathbb{P}([1]) = \frac{21}{100}$
+
+	\subsection*{[2]}
+		Die größere Zahl wird als zweite gezogen: \\
+		Es gibt immer noch 21 Zahlen $\geq 80$, da die erste $\leq 20$ ist und insgesamt git es noch 99 Zahlen: \\
+		$\Rightarrow \mathbb{P}([2]) = \frac{21}{99}$
+
+	\subsection*{Gesamt}
+		$\mathbb{P}(\{\text{größere Zahl $\geq$ 80}\} | \{\text{kleinere Zahl $\leq$ 20}\}) = \frac{21}{100} * \frac{21}{99} \approx 0,0445$
+
+\end{document}
