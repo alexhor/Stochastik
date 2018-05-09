@@ -1,0 +1,69 @@
+\documentclass[a4paper,
+twoside,
+headlines=2.1
+]{scrartcl}
+\usepackage[
+margin=2cm,
+includefoot,
+footskip=35pt,
+includeheadfoot,
+headsep=0.5cm,
+]{geometry}
+
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage[automark,headsepline]{scrlayer-scrpage}
+\usepackage{enumerate}
+\usepackage[protrusion=true,expansion=true, kerning]{microtype}
+
+\usepackage[pdftex]{graphicx}
+\usepackage{polynom}
+\usepackage{tikz}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\usepackage{color}
+
+\newcommand{\yourname}{Till Mugele \and Alexander Hornig}
+\newcommand{\headingname}{\yourname}
+\newcommand{\lecture}{Stochastik}
+\newcommand{\group}{Gruppe 1}
+\newcommand{\sheetnum}{4}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Q}{\mathbb{Q}}
+
+\newcommand{\vecl}{\left(\begin{array}{c}}
+\newcommand{\vecr}{\end{array}\right)}
+\newcommand{\x}{\cdot}
+
+\author{\yourname}
+\title{\lecture}
+\subtitle{Übungsblatt \sheetnum \\ \group}
+\date{\today} 
+
+\pagestyle{scrheadings}
+\setkomafont{pagehead}{\normalfont}
+\lohead{\lecture\\\headingname}
+\lehead{\lecture\\\headingname}
+\rohead{Übungsblatt \sheetnum\\\group}
+\rehead{Übungsblatt \sheetnum\\\group}
+
+\begin{document}
+	
+	\maketitle
+	
+	\section*{Aufgabe 1}
+		\input{Aufgaben/auf01.tex}
+	\section*{Aufgabe 2}
+		\input{Aufgaben/auf02.tex}
+	\section*{Aufgabe 3}
+		\input{Aufgaben/auf03.tex}
+	
+\end{document}
+
+
