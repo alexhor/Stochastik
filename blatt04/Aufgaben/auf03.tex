@@ -1,0 +1,13 @@
+\begin{align*}
+	f(X) & := X^n \\
+	 \\
+	\E[X^n] & = \E[f(x)] \\
+			& = \sum_{i \geq 1} f(x_i) * P(\{x_i\}) \\
+			& \stackrel{i=k}{=} \sum_{k \geq 1} f(x_k) * P(\{x_k\}) \\
+			& = \sum_{k \geq 1} x_k^n * P(\{x_k\}) \\
+			& = \sum_{k \geq 1} k^n * P(\{k\}) \\
+			& = \sum_{k \geq 1} k^n * p_k \\
+			& = \sum_{k \geq 1} k^n * (a + \frac{b}{k}) * p_{k-1} \\
+			& = \sum_{k \geq 0} (k + 1)^n * (a + \frac{b}{k + 1}) * p_{k+1-1} \\
+			& = \sum_{k \geq 0} (k + 1)^n * (a + \frac{b}{k + 1}) * p_k \\
+\end{align*}
