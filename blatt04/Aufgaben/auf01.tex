@@ -1,1 +1,18 @@
-\
+Wahrscheinlichkeiten für unterschiedliche Fälle:
+ \\
+$k \in \{1, ..., 6\}$ \\
+ \\
+\newcommand{\one}{(\frac{1}{6} * \frac{6-k}{6} * \frac{6-k}{6} * \frac{6-k}{6}) * 4}
+Niedrigste Zahl wird einmal gewürfelt $\one$ \\
+\newcommand{\two}{(\frac{1}{6} * \frac{1}{6} * \frac{6-k} * \frac{6-k}) * 6}
+Niedrigste Zahl wird zweimal gewürfelt $\two$ \\
+\newcommand{\three}{(\frac{1}{6} * \frac{1}{6} * \frac{1}{6} * \frac{6-k}{6}) * 4}
+Niedrigste Zahl wird dreimal gewürfelt $\three$ \\
+\newcommand{\four}{\frac{1}{6} * \frac{1}{6} * \frac{1}{6} * \frac{1}{6}}
+Niedrigste Zahl wird viermal gewürfelt $\four$ \\
+
+\begin{align*}
+	\E[X] = & \sum_{k=1}^{6} (\one + \two \\
+			& + \three + \four) * k \\
+		= & \frac{2275}{1296} \approx 1,755401
+\end{align*}
